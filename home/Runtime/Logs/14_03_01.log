@@ -343,3 +343,355 @@ INFO: [ view_end ] --START--
 INFO: Run ShowPageTrace Behavior [ RunTime:0.002000s ]
 INFO: [ view_end ] --END-- [ RunTime:0.002000s ]
 
+[ 2014-03-01T18:36:23+08:00 ] ERR: (ThinkException) Access denied for user 'bestchoi_shule'@'localhost' (using password: YES)
+[ 2014-03-01T18:39:23+08:00 ] 127.0.0.1 /voter/
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: temp C:\xampp\htdocs\voter\home\Lib\Action\CommonAction.class.php 第 82 行.
+SQL: SHOW COLUMNS FROM `t_temp` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `t_temp` LIMIT 1   FOR UPDATE  [ RunTime:0.000000s ]
+SQL: UPDATE `t_temp` SET `v_id`=192 WHERE ( `t_id` = 4 ) [ RunTime:0.078125s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T18:46:00+08:00 ] 127.0.0.1 /voter/index.php/Active/newest_active
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_active` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `t_active` ORDER BY date_time_start DESC LIMIT 5   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T18:48:23+08:00 ] 127.0.0.1 /voter/index.php/Active/newest_active
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.015625s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_active` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `t_active` ORDER BY date_time_start DESC LIMIT 5   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T18:54:03+08:00 ] 127.0.0.1 /voter/index.php/Active/newest_active
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_active` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `t_active` ORDER BY date_time_start DESC LIMIT 5   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T18:54:18+08:00 ] 127.0.0.1 /voter/index.php/Active/active_info
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_active` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `t_active` WHERE ( v_id='ZYBS20140192' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_volun_group` [ RunTime:0.015625s ]
+SQL: SELECT `a_id` FROM `t_volun_group` WHERE ( volun_join_id='ZYBS20140192' )  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\xampp\htdocs\voter\home\Lib\Action\ActiveAction.class.php 第 72 行.
+SQL: SELECT * FROM `t_active` WHERE ( a_id in () )  [ RunTime:0.000000s ]
+ERR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') )' at line 1
+ [ SQL语句 ] : SELECT * FROM `t_active` WHERE ( a_id in () ) 
+SQL: SELECT * FROM `t_active` WHERE ( v_id<>'ZYBS20140192' )  [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T18:54:22+08:00 ] 127.0.0.1 /voter/index.php/Index/personal
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_volunteer` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `t_volunteer` WHERE ( volunteer_id='ZYBS20140192' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 135 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 142 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 148 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 154 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 159 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 164 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 169 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 174 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 179 行.
+NOTIC: [8] Undefined variable: my_act C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 191 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.015625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2014-03-01T18:54:39+08:00 ] 127.0.0.1 /voter/index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.015625s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T18:59:25+08:00 ] 127.0.0.1 /voter/index.php/Index/personal
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_volunteer` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `t_volunteer` WHERE ( volunteer_id='ZYBS20140192' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 135 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 142 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 148 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 154 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 159 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 164 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 169 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 174 行.
+NOTIC: [8] Undefined variable: res C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 179 行.
+NOTIC: [8] Undefined variable: my_act C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 191 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T18:59:46+08:00 ] 127.0.0.1 /voter/index.php/Index/personal_insert
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_volunteer` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `t_volunteer` WHERE ( weixin_id='dd' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `t_volunteer` (`volunteer_id`,`weixin_id`,`pwd`,`name`,`sex`,`work`,`phone`,`love`) VALUES ('ZYBS20140192','dd','d','dd','','','','') [ RunTime:0.062500s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T18:59:49+08:00 ] 127.0.0.1 /voter/index.php/Index/personal
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_volunteer` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `t_volunteer` WHERE ( volunteer_id='ZYBS20140192' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: my_act C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 191 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T19:07:05+08:00 ] 127.0.0.1 /voter/index.php/Index/personal
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_volunteer` [ RunTime:0.046875s ]
+SQL: SELECT * FROM `t_volunteer` WHERE ( volunteer_id='ZYBS20140192' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: my_act C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 191 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T19:07:08+08:00 ] 127.0.0.1 /voter/index.php/Index/personal
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_volunteer` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `t_volunteer` WHERE ( volunteer_id='ZYBS20140192' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: my_act C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 191 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-03-01T19:07:09+08:00 ] 127.0.0.1 /voter/index.php/Index/personal
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `t_volunteer` [ RunTime:0.046875s ]
+SQL: SELECT * FROM `t_volunteer` WHERE ( volunteer_id='ZYBS20140192' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:0.000000s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: my_act C:\xampp\htdocs\voter\home\Runtime\Cache\9815dd2e9b077b3e809c5f3fd1326b94.php 第 191 行.
+INFO: Run ParseTemplate Behavior [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:0.000000s ]
+INFO: Run TokenBuild Behavior [ RunTime:0.000000s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:0.000000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+

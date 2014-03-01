@@ -13,55 +13,57 @@
 <body>
 
 <div id="web">
-			<!-- 响应式设计标签 -->
-	<!-- 在手机上不可放大缩小 -->
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+		<!-- 鍝嶅簲寮忚璁℃爣绛�-->
+	<!-- 鍦ㄦ墜鏈轰笂涓嶅彲鏀惧ぇ缂╁皬 -->
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-	<!-- 通过快捷方式打开时全屏显示 -->
+	<!-- 閫氳繃蹇嵎鏂瑰紡鎵撳紑鏃跺叏灞忔樉绀�-->
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<!-- 隐藏状态栏 -->
+	<!-- 闅愯棌鐘舵�鏍�-->
 	<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
-	<!-- 忽略将数字识别为电话号码 -->
+	<!-- 蹇界暐灏嗘暟瀛楄瘑鍒负鐢佃瘽鍙风爜 -->
 	<meta name="format-detection" content="telephone=no" />
-	<!-- end 响应式设计标签 -->
+	<!-- end 鍝嶅簲寮忚璁℃爣绛�-->
 
 	<div id="header">
 	</div>
 	<div class="nav"></div>
 
 	<div id="menu">
-<!-- 		活动信息<br />
-		————<a href="__APP__/Active/active_form">活动项目</a><br />
-		————<a href="__APP__/Active/active_jianbao">活动简报</a><br />
-		————<a href="__APP__/Contents/item_desc">项目简介</a><br />
-		————<a href="__APP__/Index/personal">个人信息</a><br />
+<!-- 		娲诲姩淇℃伅<br />
+		鈥斺�鈥斺�<a href="__APP__/Active/active_form">娲诲姩椤圭洰</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Active/active_jianbao">娲诲姩绠�姤</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/item_desc">椤圭洰绠�粙</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Index/personal">涓汉淇℃伅</a><br />
 
-		创卫监督<br />
-		————<a href="__APP__/Contents/add_form?type=1">发布信息</a><br />
-		————<a href="__APP__/Contents/article_list?type=1">卫生情况</a><br />
+		鍒涘崼鐩戠潱<br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/add_form?type=1">鍙戝竷淇℃伅</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/article_list?type=1">鍗敓鎯呭喌</a><br />
 
-		群众路线<br />
-		————<a href="__APP__/Contents/add_form?type=2">发布信息</a><br />
-		————<a href="__APP__/Contents/article_list?type=2">活动简讯</a><br /> -->
-		活动信息<br />
-		————<a href="__APP__/Active/newest_active">最新活动</a><br />
-		————<a href="__APP__/Active/active_info">活动信息</a><br />
-		————<a href="__APP__/Active/active_form">发布活动</a><br />
-		————<a href="__APP__/Index/register_form">注册信息</a><br />
-		————<a href="__APP__/Contents/item_desc">常态项目简介</a><br />
+		缇や紬璺嚎<br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/add_form?type=2">鍙戝竷淇℃伅</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/article_list?type=2">娲诲姩绠�</a><br /> -->
+		娲诲姩淇℃伅<br />
+		鈥斺�鈥斺�<a href="__APP__/Active/newest_active">鏈�柊娲诲姩</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Active/active_info">娲诲姩淇℃伅</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Active/active_form">鍙戝竷娲诲姩</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Index/register_form">娉ㄥ唽淇℃伅</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/item_desc">甯告�椤圭洰绠�粙</a><br />
 
-		创卫监督<br />
-		————<a href="__APP__/Contents/add_form?type=1">发布信息</a><br />
-		————<a href="__APP__/Contents/article_list?type=1">创卫活动</a><br />
+		鍒涘崼鐩戠潱<br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/add_form?type=1">鍙戝竷淇℃伅</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/article_list?type=1">鍒涘崼娲诲姩</a><br />
 
-		群众路线党员志愿服务<br />
-		————<a href="__APP__/Contents/add_form?type=2">发布信息</a><br />
-		————<a href="__APP__/Contents/article_list?type=2">活动简讯</a><br />
+		缇や紬璺嚎鍏氬憳蹇楁効鏈嶅姟<br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/add_form?type=2">鍙戝竷淇℃伅</a><br />
+		鈥斺�鈥斺�<a href="__APP__/Contents/article_list?type=2">娲诲姩绠�</a><br />
 	</div>
 
 	<div class="nav"></div>
 
 <!-- 
-注册组织、发布简报、同意加入、取消加入、管理员界面
+娉ㄥ唽缁勭粐銆佸彂甯冪畝鎶ャ�鍚屾剰鍔犲叆銆佸彇娑堝姞鍏ャ�绠＄悊鍛樼晫闈�
 -->
 
 	<div id="container">
