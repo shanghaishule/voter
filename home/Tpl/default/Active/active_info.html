@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>活动信息 - 创卫志愿</title>
+
+<link type="text/css" rel="stylesheet" href="../Public/css/reset.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/style.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/list_v2.css">
+
+</head>
+<body>
+
+<div id="web">
+	<include file="Public:header" />
+
+	<div id="container">
+
+		<if condition="!empty($my_content)">
+			<center><b>我发布的项目</b></center>
+
+			<volist name="my_content" id="vo">
+				<!-- <hr class="hr1"> -->
+				<div class="contents fl">
+					<a href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
+						<div class="title fl">{$vo['title']}</div>
+						<div class="pic fl"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
+					</a>
+				</div>
+				<div class="nav"></div>
+			</volist>
+
+		</if>
+		
+		<if condition="!empty($my_join_content)">
+			<center><b>我报名的项目</b></center>
+
+			<volist name="my_join_content" id="vo">
+				<div class="contents fl">
+					<a href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
+						<div class="title fl">{$vo['title']}</div>
+						<div class="pic fr"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
+					</a>
+				</div>
+				<div class="nav"></div>
+			</volist>
+		</if>
+
+		<if condition="!empty($other_content)">
+			<center><b>别人发布的项目列表</b></center>
+
+			<volist name="other_content" id="vo">
+				<div class="contents fl">
+					<a href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
+						<div class="title fl">{$vo['title']}</div>
+						<div class="pic fr"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
+					</a>
+				</div>
+				<div class="nav"></div>
+			</volist>
+		</if>
+	</div>
+
+	<div id="footer">
+		<include file="Public:footer" />
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>{$msgTitle}-{$error}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- 响应式设计标签 -->
+	<!-- 在手机上不可放大缩小 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+	<!-- 通过快捷方式打开时全屏显示 -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- 隐藏状态栏 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+	<!-- 忽略将数字识别为电话号码 -->
+	<meta name="format-detection" content="telephone=no" />
+	<!-- end 响应式设计标签 -->
+
+<base target='_self'/>
+<style>div{line-height:160%;}</style>
+</head>
+<body leftmargin='0' topmargin='0' bgcolor='#FFFFFF'>
+
+<script>
+	var pgo=0;
+    function JumpUrl(){
+    	if(pgo==0){ location='{$jumpUrl}'; pgo=1; }
+    }
+
+	window.onload = init;
+	function init(){
+		redirect({$waitSecond}, "time");
+	}
+
+	function redirect(count, id){
+		setInterval(function(){
+			document.getElementById(id).innerHTML = count;
+			count--;
+		},1000);
+	}
+</script>
+
+<center>
+	<br />
+	<div style='width:333px;padding:2px;border:1px solid #DADADA;'>
+		<div style='padding:6px;font-size:12px;border-bottom:1px solid #DADADA;background:#DBEEBD;'>
+			<b>{$msgTitle}！</b>
+		</div>;
+		<div style='height:130px;font-size:10pt;background:#ffffff;'>
+			<br />
+			<b style="color:#F00">{$error}</b>
+			<br />我将在 <span id="time" style="color:blue;font-weight:bold;">{$waitSecond}</span> 秒后自动跳转,点 <a href="{$jumpUrl}">这里</a> 直接跳转<br/>
+		</div>
+	</div>
+</center>
+
+<script>
+	var time = {$waitSecond} * 1000;
+	setTimeout('JumpUrl()', time);
+</script>
+
+</body>
+</html>

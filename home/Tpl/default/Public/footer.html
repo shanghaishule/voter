@@ -1,0 +1,9 @@
+<p><a href="__APP__">创卫志愿@蜀乐</a></p>
+
+<if condition="$vvv_id eq ''">
+	<p><a href="{:U('Index/login_form')}">登录</a></p>
+<elseif condition="$vvv_id != '' && $_SESSION['temp'] == 0 " />
+	<p>{$vvv_id}，欢迎您！<a href="{:U('Index/logout')}">退出</a></p>
+<elseif condition="$vvv_id != '' && $_SESSION['temp'] == 1 " />
+	<p>{$vvv_id}(游客账号)，请<a href="__APP__/Index/personal">绑定</a>或<a href="{:U('Index/login_form')}">登录</a>账号
+</if>

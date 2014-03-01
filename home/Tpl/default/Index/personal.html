@@ -1,0 +1,153 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>个人信息 - 创卫志愿</title>
+
+<link type="text/css" rel="stylesheet" href="../Public/css/reset.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/style.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
+<style type="text/css">
+.labels{
+	margin-left: 2px;
+	float: left;
+	text-align: right;
+	width: 122px;
+	font-size: 20px;
+}
+form{margin:0px}
+input{
+	width: 180px;
+	border:1px solid #808080;
+	margin: 2px;
+	padding: 2px;
+}
+
+textarea{
+	width: 250px;
+	height: 150px;
+}
+
+.button{
+	margin-left: 90px;
+	margin-top: 5px;
+	width: 140px;
+}
+
+.star{ color:red;}
+
+br{
+	clear: left;
+}
+.input_class{
+	margin-top: 5px;
+	padding-top: 5px;
+}
+</style>
+
+<load href="../Public/js/alert.js" />
+<script language="javascript">
+	var index = new Array();
+	var obj = new Array();　//创建一个数组
+
+	index[0] = 'weixin_id';
+	obj['weixin_id'] = '微信帐号必须!';
+
+	index[1] = 'name';
+	obj['name'] = '姓名必须!';
+
+	index[2] = 'pwds';
+	obj['pwds'] = '密码必须!';
+
+    function input_check(form) {
+    	for(var i = 0; i < index.length; i++){
+          	if (form[index[i]].value == ""){
+                sAlert(obj[index[i]]);
+                return false;
+          	}
+    	}
+    }
+</script>
+
+</head>
+<body>
+
+<div id="web">
+	<include file="Public:header" />
+
+	<div id="container">
+		<!-- <b><a href="__APP__/Index/personal">完善个人信息</a></b>&nbsp;&nbsp;<b><a href="__APP__/Group/group">完善志愿者组织信息</a></b> -->
+		<center><b>完善个人信息</b></center>
+		<form action="__URL__/personal_insert" method="POST">
+
+			<div class="input_class">
+				<input type="hidden" name="id" value="{$res['id']}" />
+				<span class="labels">志愿者编号：</span>
+				<input type="text" name="volunteer_id" value="{$vid}" readonly />
+			</div>
+
+			<div class="input_class">
+				<span class="labels">微信账号：</span>
+				<input type="text" name="weixin_id" value="{$res['weixin_id']}" />
+				<span class="star">*</span>
+			</div>
+
+			<div class="input_class">
+				<span class="labels">姓名：</span>
+				<input type="text" name="name" value="{$res['name']}" />
+				<span class="star">*</span>
+			</div>
+			
+			<div class="input_class">	
+				<span class="labels">性别：</span>
+				<input type="text" name="sex" value="{$res['sex']}" />
+			</div>
+
+			<div class="input_class">
+				<span class="labels">工作单位：</span>
+				<input type="text" name="work" value="{$res['work']}" />
+			</div>
+
+			<div class="input_class">
+				<span class="labels">电话：</span>
+				<input type="text" name="phone" value="{$res['phone']}" />
+			</div>
+
+			<div class="input_class">
+				<span class="labels">爱好特长：</span>
+				<input type="text" name="love" value="{$res['love']}" />
+			</div>
+
+			<div class="input_class">
+				<span class="labels">状态：</span>
+				<input type="text" name="pwd" value="{$res['type_content']}" readonly/>
+			</div>
+
+			<div class="input_class">
+				<span class="labels">密码：</span>
+				<input type="text" name="pwds" value="{$res['pwd']}" />
+				<span class="star">*</span>
+			</div>
+
+			<div class="input_class">
+				<input type="submit" class="button" onclick="return input_check(this.form);" value="提交" />
+				<!-- <input type="submit" class="button" value="返回" onclick="window.history.go(-1)"> -->
+			</div>
+
+		</form>
+<!-- 		<br />
+		<b>我报名的活动</b><br />
+		<volist name="my_act" id="vo">
+			标题：<a href="__URL__/news_detail?c_id={$vo['c_id']}">{$vo['title']}</a><br />
+			发布者：{$vo['volun_id']}<br />
+			状态：{$vo['join']}<br /><br />
+		</volist> -->
+	</div>
+
+	<div id="footer">
+		<include file="Public:footer" />
+	</div>
+</div>
+
+</body>
+</html>

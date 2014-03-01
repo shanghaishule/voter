@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>登陆 - 创卫志愿</title>
+
+<link type="text/css" rel="stylesheet" href="../Public/css/reset.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/style.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
+<style type="text/css">
+.labels{
+	margin-left: 25px;
+	float: left;
+	text-align: right;
+	width: 92px;
+	font-size: 20px;
+}
+form{margin:0px}
+input{
+	width: 180px;
+	border:1px solid #808080;
+	margin: 2px;
+	padding: 2px;
+}
+
+textarea{
+	width: 250px;
+	height: 150px;
+}
+
+.button{
+	margin-left: 90px;
+	margin-top: 5px;
+	width: 140px;
+}
+
+.star{ color:red;}
+
+br{
+	clear: left;
+}
+.input_class{
+	margin-top: 5px;
+	padding-top: 5px;
+}
+</style>
+
+<load href="../Public/js/alert.js" />
+<script language="javascript">
+	var index = new Array();
+	var obj = new Array();　//创建一个数组
+
+	index[0] = 'weixin_id';
+	obj['weixin_id'] = '微信帐号必须!';
+
+	index[1] = 'pwds';
+	obj['pwds'] = '密码必须!';
+
+    function input_check(form) {
+    	for(var i = 0; i < index.length; i++){
+          	if (form[index[i]].value == ""){
+                sAlert(obj[index[i]]);
+                return false;
+          	}
+    	}
+    }
+</script>
+
+</head>
+<body>
+
+<div id="web">
+	<include file="Public:header" />
+
+	<div id="container">
+		<center><b>志愿者登陆</b></center>
+		<form action="__URL__/login" method="POST">
+			<div class="input_class">
+				<span class="labels">微信号：</span>
+				<input type="text" name="weixin_id" />
+			</div>
+
+			<div class="input_class">
+				<span class="labels">密码：</span>
+				<input type="password" name="pwds" />
+			</div>
+
+			<div class="input_class">
+				<input type="submit" class="button" onclick="return input_check(this.form);" value="提交" />
+				<!-- <input type="submit" class="button" value="返回" onclick="window.history.go(-1)"> -->
+			</div>
+		</form>
+	</div>
+
+	<div id="footer">
+		<include file="Public:footer" />
+	</div>
+</div>
+
+</body>
+</html>

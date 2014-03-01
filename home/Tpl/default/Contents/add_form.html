@@ -1,0 +1,114 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>发布内容 - 创卫志愿</title>
+
+<link type="text/css" rel="stylesheet" href="../Public/css/reset.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/style.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
+<style type="text/css">
+.labels{
+	float: left;
+	width: 60px;
+	font-size: 20px;
+}
+.labels_a{
+	font-size: 20px;
+}
+form{margin:0px}
+input{
+	width: 180px;
+	border:1px solid #808080;
+	margin: 2px;
+	padding: 2px;
+}
+
+textarea{
+	width: 250px;
+	height: 150px;
+}
+
+.button{
+	margin-left: 90px;
+	margin-top: 5px;
+	width: 140px;
+}
+
+.star{ color:red;}
+
+br{
+	clear: left;
+}
+.input_class{
+	margin-top: 5px;
+	padding-top: 5px;
+}
+</style>
+
+<load href="../Public/js/alert.js" />
+<script language="javascript">
+	var index = new Array();
+	var obj = new Array();　//创建一个数组
+
+	index[0] = 'title';
+	obj['title'] = '标题必须!';
+
+    function input_check(form) {
+    	for(var i = 0; i < index.length; i++){
+          	if (form[index[i]].value == ""){
+                sAlert(obj[index[i]]);
+                return false;    
+          	}
+    	}
+    }
+</script>
+
+<load href="../Public/js/jquery.min.js" />
+<load href="../Public/js/ajaxfileupload.js" />
+<load href="../Public/js/changImg.js" />
+
+</head>
+<body>
+
+<div id="web">
+	<include file="Public:header" />
+	<!-- <img src="__PUBLIC__/Uploads/20140218/53032c4a40b29.jpg"> -->
+	<div id="container">
+
+		<form action="__URL__/add_data" method="POST" enctype="multipart/form-data">
+			<input type="hidden" name="type" value="{$type}" />
+
+			<div class="input_class">
+				<span class="labels">标题：</span>
+				<input type="text" name="title" />
+				<span class="star">*</span>
+			</div>
+			
+			<div class="input_class">
+				<span class="labels_a">内容：</span>
+				<textarea name="contents" style="WIDTH: 260px; HEIGHT: 120px"></textarea>
+			</div>
+
+			<div class="input_class">
+				<span class="labels">图片：</span>
+				<input type="file" name="pic" id="pic" onchange="changImg('__APP__/Pic/upload_image', '__PUBLIC__/Uploads/')" />
+				<input type="hidden" name="pic_url" id="pic_url" value=""/>  
+				<div id="imgContainer1" style="max-width: 200px;margin: 0 auto;"></div>
+			</div>
+
+			<div class="input_class">
+				<input type="submit" class="button" onclick="return input_check(this.form);" value="提交" />
+				<!-- <input type="submit" class="button" value="返回" onclick="window.history.go(-1)"> -->
+			</div>
+		</form>
+
+	</div>
+
+	<div id="footer">
+		<include file="Public:footer" />
+	</div>
+</div>
+
+</body>
+</html>

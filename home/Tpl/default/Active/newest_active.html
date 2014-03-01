@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>最新活动</title>
+
+<link type="text/css" rel="stylesheet" href="../Public/css/reset.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/style.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/list_v2.css">
+
+</head>
+<body>
+
+<div id="web">
+	<include file="Public:header" />
+
+	<div id="container">
+
+		<center><b>最新活动</b></center>
+
+		<if condition="!empty($my_content)">
+			<volist name="my_content" id="vo">
+				<!-- <hr class="hr1"> -->
+				<div class="contents fl">
+					<a href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
+						<div class="title fl">{$vo['title']}</div>
+						<div class="pic fl"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
+					</a>
+				</div>
+				<div class="nav"></div>
+			</volist>
+		</if>
+		
+	</div>
+
+	<div id="footer">
+		<include file="Public:footer" />
+	</div>
+</div>
+
+</body>
+</html>

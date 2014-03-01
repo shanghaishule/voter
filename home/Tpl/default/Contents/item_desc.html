@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>{$res['title']} - 创卫志愿</title>
+
+<link type="text/css" rel="stylesheet" href="../Public/css/reset.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/style.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
+
+<style>
+.contents{
+	margin: 5px;
+	font-size: 13px;
+}
+.auth{
+	margin: 5px;
+	font-size: 13px;	
+}
+.pic{
+	margin: 5px;
+}
+.pic img{
+	max-width: 323px;
+	height: auto; 
+}
+</style>
+
+</head>
+<body>
+
+<div id="web">
+	<include file="Public:header" />
+
+	<div id="container">
+		<center><b>{$res['title']}</b></center>
+<!-- 		<div class="auth">
+			<center>作者：{$res['v_id']}</center>
+		</div> -->
+		<div class="contents">{$res['contents']}</div>
+<!-- 		<if condition="$res['pic'] neq ''">
+			<div class="pic"><img src="__PUBLIC__/Uploads/{$res['pic']}"></div>
+		</if> -->
+	</div>
+
+	<div id="footer">
+		<include file="Public:footer" />
+	</div>
+</div>
+
+</body>
+</html>

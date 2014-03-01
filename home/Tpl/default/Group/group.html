@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>注册组织 - 创卫志愿</title>
+
+<link type="text/css" rel="stylesheet" href="../Public/css/reset.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/style.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
+
+<style type="text/css">
+.labels{
+/*	margin-left: 25px;*/
+	float: left;
+	text-align: right;
+	width: 116px;
+	font-size: 20px;
+}
+form{margin:0px}
+input{
+	width: 180px;
+	border:1px solid #808080;
+	margin: 2px;
+	padding: 2px;
+}
+
+textarea{
+	width: 250px;
+	height: 150px;
+}
+
+.button{
+	margin-left: 90px;
+	margin-top: 5px;
+	width: 140px;
+}
+
+.star{ color:red;}
+
+br{
+	clear: left;
+}
+.input_class{
+	margin-top: 5px;
+	padding-top: 5px;
+}
+</style>
+
+<load href="../Public/js/alert.js" />
+<script language="javascript">
+	var index = new Array();
+	var obj = new Array();　//创建一个数组
+
+	index[0] = 'name';
+	obj['name'] = '团体名称必须!';
+
+	index[1] = 'mem_num';
+	obj['mem_num'] = '成员人数必须!';
+
+	index[2] = 'place';
+	obj['place'] = '活动地点必须!';
+
+	index[3] = 'phone';
+	obj['phone'] = '手机号码必须!';
+
+    function input_check(form) {
+    	for(var i = 0; i < index.length; i++){
+          	if (form[index[i]].value == ""){
+                sAlert(obj[index[i]]);
+                return false;    
+          	}
+    	}
+    }
+</script>
+
+</head>
+<body>
+
+<div id="web">
+	<include file="Public:header" />
+
+	<div id="container">
+		<!-- <b><a href="__APP__/Index/personal">完善个人信息</a></b>&nbsp;&nbsp;<b><a href="__APP__/Group/group">完善志愿者组织信息</a></b> -->
+		<center><b>完善志愿者组织信息</b></center>
+		<form action="__APP__/Group/group_insert" method="POST">
+			<input type="hidden" name="g_id" value="{$res['g_id']}" />
+
+			<div class="input_class">
+				<span class="labels">团体名称：</span>
+				<input type="text" name="name" value="{$res['name']}" />
+				<span class="star">*</span>
+			</div>
+
+			<div class="input_class">
+				<span class="labels">成员人数：</span>
+				<input type="text" name="mem_num" value="{$res['mem_num']}" />
+				<span class="star">*</span>
+			</div>
+				
+			<div class="input_class">
+				<span class="labels">负责人：</span>
+				<input type="text" name="resp" value="{$vid}" readonly />
+			</div>
+				
+			<div class="input_class">
+				<span class="labels">手机：</span>
+				<input type="text" name="phone" value="{$res['phone']}" />
+				<span class="star">*</span>
+			</div>
+				
+			<div class="input_class">
+				<input type="submit" class="button" onclick="return input_check(this.form);" value="提交" />
+				<!-- <input type="submit" class="button" value="返回" onclick="window.history.go(-1)"> -->
+			</div>
+		</form>
+
+	</div>
+
+	<div id="footer">
+		<include file="Public:footer" />
+	</div>
+</div>
+
+</body>
+</html>

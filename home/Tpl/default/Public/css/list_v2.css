@@ -1,0 +1,52 @@
+.title{
+	display:block;/*内联对象需加*/
+	margin: 5px;
+	height: 70px; 
+	width: 240px;
+	line-height: 70px; 
+	overflow: hidden;
+	font-size: 18px;
+	font-style: italic;
+}
+.pic{
+	margin: 5px;
+}
+.pic img{
+	width: 70px;
+	height: 70px;
+}
+
+.contents{
+	border-radius: 25px;
+	-moz-border-radius:25px;
+	-moz-border-radius-topleft:25px;
+	-moz- border- radius-topright:25px;
+	-moz-border-radius-bottomleft:25px;
+	-moz- border- radius- bottomright:25px; 
+	
+	background-color: rgb(236, 236, 236);
+}
+
+a:link {color: black}     /* 未被访问的链接     蓝色 */
+a:visited {color: black}  /* 已被访问过的链接   蓝色 */
+a:hover {color: black}    /* 鼠标悬浮在上的链接 蓝色 */
+a:active {color: black}   /* 鼠标点中激活链接   蓝色 */
+
+/*通用的样式*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.nav{
+	width:100%;
+	height:2px;
+	clear:both;
+	overflow:hidden;
+}
+.hr1{
+	height: 1px;
+	border: none;
+	border-top: 1px solid #555555;
+}

@@ -1,0 +1,113 @@
+* {
+	margin:0;
+	padding:0;
+}
+body{
+    font-family: arial, 宋体, serif;
+    font-size:12px;
+}
+#web{
+    margin: 1px;
+    padding: 1px;
+    width: 99%;
+    word-break:break-all;
+	word-wrap:break-word;
+}
+/*#web a:link { text-decoration: none;color: blue}
+#web a:active { text-decoration:blink}
+#web a:hover { text-decoration:underline;color: red} 
+#web a:visited { text-decoration: none;color: green}*/
+#header{
+	width: 100%;
+	height: auto;
+}
+#header img{
+	width: 100%;
+	max-width: 640px;
+	margin:0 auto;
+}
+
+#menu{
+	font-size: 15px;
+	text-align: left;
+	width: 333px;
+	height: auto;
+	margin:0 auto;
+	background-color: hsl(0, 86%, 37%); 
+	padding: 8px;
+}
+#menu a{background-color:green;}
+#menu a:link { text-decoration: none;color: white;}
+#menu a:visited { text-decoration: none;color: hsl(0, 53%, 82%);}
+
+#menu li{
+	margin: 1px;
+	padding: 1px;
+}
+
+#container{
+	text-align: left;
+	width: 333px;
+	margin:0 auto;
+	font-size: 15px;
+}
+
+#footer{
+	margin: 3px;
+	padding: 8px;
+	max-width: 333px;
+	background-color: grey;
+	clear: both;
+	margin: 0 auto;
+}
+#footer p{
+	height: 30px;
+	font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer a{background-color:green;}
+#footer a:link { text-decoration: none;color: white;}
+#footer a:visited { text-decoration: none;color: hsl(0, 53%, 82%);}
+
+
+/*通用的样式*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.nav{
+	width:100%;
+	height:2px;
+	clear:both;
+	overflow:hidden;
+}
+
+/*表单样式*/
+/*label{
+	float: left;
+	width: 80px;
+}
+form{margin:0px}
+input{
+	width: 180px;
+	border:1px solid #808080
+}
+
+textarea{
+	width: 250px;
+	height: 150px;
+}
+
+.button{
+	margin-left: 45px;
+	margin-top: 5px;
+	width:80px;
+}
+
+br{
+	clear: left;
+}*/

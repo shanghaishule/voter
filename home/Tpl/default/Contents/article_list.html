@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<!-- <title>创卫志愿</title> -->
+
+<link type="text/css" rel="stylesheet" href="../Public/css/reset.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/style.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/list_v2.css">
+
+<style>
+a.yangshi{color:#333;text-decoration:none; }
+a.yangshi:hover {color:#CC3300;text-decoration:underline;}
+</style>
+
+</head>
+<body>
+
+<div id="web">
+	<include file="Public:header" />
+
+	<div id="container">
+		<if condition="$type eq '1'">
+			<center><b>创卫活动</b></label></center>
+			<title>创卫活动</title>
+		<elseif condition="$type eq '2'" />
+			<center><b>活动简讯</b></label></center>
+			<title>活动简讯</title>
+<!-- 		<elseif condition="$type eq '3'" />
+			<center><b>项目简介</b></label></center>
+			<title>项目简介</title> -->
+		</if>
+			
+		<volist name="res" id="vo">
+			<hr class="hr1">
+			<a href="__APP__/Contents/article_detail?c_id={$vo['c_id']}">
+				<div class="pic fl"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
+				<div class="title fl">{$vo['title']}</div>
+			</a>
+			<div class="nav"></div>
+		</volist>
+
+	</div>
+
+	<div id="footer">
+		<include file="Public:footer" />
+	</div>
+</div>
+
+</body>
+</html>

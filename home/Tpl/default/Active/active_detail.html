@@ -1,0 +1,202 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>{$res['title']} - 创卫志愿</title>
+
+<link type="text/css" rel="stylesheet" href="../Public/css/reset.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/style.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="../Public/css/detail_v2.css">
+<style>
+.labels{
+	float: left;
+	width: 60px;
+	font-size: 20px;
+}
+form{margin:0px}
+input{
+	width: 180px;
+	border:1px solid #808080;
+	margin: 0px;
+	padding: 0px;
+}
+.button{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 70px;
+}
+textarea{
+	width: 260px;
+	height: 40px;
+}
+.star{ color:red;}
+br{
+	clear: left;
+}
+.input_class{
+	margin-top: 5px;
+	padding-top: 5px;
+}
+.button2{
+	margin-left: 0px;
+	margin-top: 0px;
+	width: 66px;
+	height: 40px;
+}
+.time{
+	color: blue;
+	font-weight:bold;
+}
+.end{
+	margin: 1px;
+	padding: 1px;
+}
+.start_end{
+	margin: 1px;
+	padding: 1px;
+}
+
+.baoming{
+	background-color: silver;
+	border: silver 1px dashed;
+}
+.picture{
+
+}
+.picture img{
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+}
+</style>
+
+<load href="../Public/js/jquery.min.js" />
+<load href="../Public/js/ajaxfileupload.js" />
+<load href="../Public/js/changImg.js" />
+
+</head>
+<body>
+
+<div id="web">
+	<include file="Public:header" />
+
+	<div id="container">
+		<center><b>{$res['title']}</b></center>
+
+		<div>&nbsp;&nbsp;发起人：{$res['v_id']}</div>
+		<if condition="$res['flag'] eq '-1'">
+			<if condition="!empty($img)">
+				<volist name="img" id="vo">
+					<div class="picture fl">
+						<img src="__PUBLIC__/Uploads/{$vo['pic']}">
+					</div>
+					<div class="nav"></div>
+				</volist>
+			<else />
+				<div class="picture">
+					<img src="../Public/images/default.jpg">
+				</div>
+			</if>
+		<else />
+			<if condition="!empty($res['pic'])">
+				<div class="picture">
+					<img src="__PUBLIC__/Uploads/{$res['pic']}">
+				</div>
+			<else />
+				<div class="picture">
+					<img src="../Public/images/default.jpg">
+				</div>
+			</if>
+		</if>
+
+		<div>
+			<div class="time">时间：</div>
+			<div class="end">&nbsp;&nbsp;截止{$res['date_time_end']}</div>
+			<div class="start_end">&nbsp;&nbsp;活动{$res['date_time_start']} 至 {$res['date_time_end']}</div>
+		</div>
+
+		<div>
+			<div class="time">地点：</div>
+			<div>&nbsp;&nbsp;{$res['place']}</div>
+		</div>
+
+		<div>
+			<div class="time">内容：</div>
+			<div>&nbsp;&nbsp;{$res['contents']}</div>
+		</div>
+
+		<div>
+			<div class="time">志愿者：</div>
+			&nbsp;&nbsp;报名{$res['num_baoming']}人，招募{$res['num']}人
+		</div>
+
+		<if condition="$res['is_admin'] eq '0'">
+			<div>
+				<if condition="$res['flag'] eq '0'">
+					<center><a class="baoming" href="__URL__/join?a_id={$res['a_id']}&v_id={$res['v_id']}">我要报名</a></center>
+				<elseif condition="$res['flag'] eq '-1'" />
+					<form action="__URL__/upload_file" method="POST" enctype="multipart/form-data">
+						<input type="hidden" name="a_id" value="{$res['a_id']}" />
+						<div class="input_class">
+							<span class="labels">图片：</span>
+							<input type="file" name="pic" id="pic" onchange="changImg('__APP__/Pic/upload_image', '__PUBLIC__/Uploads/')" />
+							<input type="hidden" name="pic_url" id="pic_url" value=""/>  
+							<div id="imgContainer1" style="max-width: 200px;margin: 5px auto;"></div>
+							<center><input type="submit" class="button" value="提交" /></center>
+							<!-- <input type="submit" class="button" value="返回" onclick="window.history.go(-1)"> -->
+						</div>
+					</form>
+				<elseif condition="$res['flag'] eq '1'" />
+					&nbsp;&nbsp;通知：{$notice}
+				<elseif condition="$res['flag'] eq '2'" />
+					<center><a class="baoming" href="__URL__/unjoin?a_id={$res['a_id']}&v_id={$res['v_id']}">取消报名</a></center>
+				</if>
+			</div>
+		<elseif condition="$res['is_admin'] eq '1'" />
+			<div>
+				<volist name="volun_res" id="vo">
+					<div>&nbsp;&nbsp;报名者：{$vo['volun_join_id']}
+						<if condition="$res['flag'] neq '-1'">
+							<if condition="$vo['join'] eq 2">，<a href="__URL__/agree_join?vg_id={$vo['vg_id']}">同意</a>或取消</if>
+							<if condition="$vo['join'] eq 1">，同意或<a href="__URL__/agree_join?vg_id={$vo['vg_id']}">取消</a></if>
+						</if>
+					</div>
+				</volist>
+				<if condition="$res['flag'] neq '-1'">
+					<div class="input_class">
+						<form action="__URL__/add_notice" method="POST">
+							<input type="hidden" name="a_id" value="{$res['a_id']}" />
+							<textarea name="notice">请于{$res['date_time_start']}在{$res['place']}集中</textarea>
+							<input type="submit" class="button2" value="提交" />
+						</form>
+					</div>
+				</if>
+				<div style="margin:3px;">
+					<if condition="$res['flag'] eq '-1'">
+						<form action="__URL__/upload_file" method="POST" enctype="multipart/form-data">
+							<input type="hidden" name="a_id" value="{$res['a_id']}" />
+							<div class="input_class">
+								<span class="labels">图片：</span>
+								<input type="file" name="pic" id="pic" onchange="changImg('__APP__/Pic/upload_image', '__PUBLIC__/Uploads/')" />
+								<input type="hidden" name="pic_url" id="pic_url" value=""/>  
+								<div id="imgContainer1" style="max-width: 200px;margin: 5px auto;"></div>
+								<center><input type="submit" class="button" value="提交" /></center>
+								<!-- <input type="submit" class="button" value="返回" onclick="window.history.go(-1)"> -->
+							</div>
+						</form>
+					<else />
+						<center><a class="baoming" href="__URL__/end_active?a_id={$res['a_id']}">结束活动</a></center>
+					</if>
+				</div>
+			</div>
+		</if>
+	</div>
+
+	<div id="footer">
+		<include file="Public:footer" />
+	</div>
+</div>
+
+</body>
+</html>
