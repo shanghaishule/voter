@@ -49,27 +49,35 @@ body{
 	text-align: left;
 	width: 333px;
 	margin:0 auto;
-	font-size: 15px;
+	font-size: 14px;
 }
-
+/*
+*	footer.html
+*/
 #footer{
-	margin: 3px;
-	padding: 8px;
-	max-width: 333px;
-	background-color: grey;
-	clear: both;
-	margin: 0 auto;
+  margin: 3px;
+  padding: 8px;
+  max-width: 333px;
+  clear: both;
+  background: #1d1a18;
+  border-top: 1px solid #0f0d0c;
+  border-bottom: 1px solid #312d2b;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 4px;
 }
 #footer p{
-	height: 30px;
-	font-size: 14px;
-    margin-left: auto;
-    margin-right: auto;
+  height: 30px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #FFF;
 }
 
-#footer a{background-color:green;}
-#footer a:link { text-decoration: none;color: white;}
-#footer a:visited { text-decoration: none;color: hsl(0, 53%, 82%);}
+#footer a{ 
+  text-decoration: none;
+  color:#0a8cd2;
+}
 
 
 /*通用的样式*/
@@ -111,3 +119,11 @@ textarea{
 br{
 	clear: left;
 }*/
+
+/*
+*	Common
+*/
+.required {
+	color: red;
+	font-family: "SimSun";
+}
