@@ -5,6 +5,7 @@
 body{
     font-family: arial, 宋体, serif;
     font-size:12px;
+	background: #e1f4fc;
 }
 #web{
     margin: 1px;
@@ -59,19 +60,19 @@ body{
   padding: 8px;
   max-width: 333px;
   clear: both;
-  background: #1d1a18;
+  /* background: #1d1a18;
   border-top: 1px solid #0f0d0c;
-  border-bottom: 1px solid #312d2b;
+  border-bottom: 1px solid #312d2b; */
   margin: 0 auto;
   margin-top: 20px;
-  border-radius: 4px;
+  border-top: solid 1px #c5e1ed;
 }
 #footer p{
-  height: 30px;
+  height: 25px;
   font-size: 14px;
   margin-left: auto;
   margin-right: auto;
-  color: #FFF;
+  color: #333;
 }
 
 #footer a{ 

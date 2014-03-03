@@ -10,7 +10,7 @@
 <style type="text/css">
 .field_row {
   height: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 .field_label {
   display: inline-block;
@@ -31,23 +31,28 @@ input{
 	-webkit-box-shadow: 0px 1px 1px 0px #eaeaea inset;
 	-moz-box-shadow: 0px 1px 1px 0px #eaeaea inset;
 	border-radius: 4px;
+	border: 1px solid #a8d3e4;
 }
 
 input[type="text"]:focus {
-	border-color: #FFB941;
+	/* border-color: #FFB941; */
+	outline: -webkit-focus-ring-color auto 5px;
 }
 .submit_btn {
   margin-left: 120px;
   height: 30px;
-  border: 1px solid #ffb33b;
-  background: #FFA00A;
+  border: 0;
   font-size: 15px;
   color: #FFF;
+  background-color: #9fb000;
 }
 
 #form_header {
-  border-bottom: 3px solid #ffa00a;
   margin-bottom: 10px;
+}
+
+#form_header h2 {
+	border-bottom: solid 1px #c5e1ed;
 }
 </style>
 
