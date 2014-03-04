@@ -9,11 +9,6 @@
 <link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="../Public/css/list_v2.css">
 
-<style>
-a.yangshi{color:#333;text-decoration:none; }
-a.yangshi:hover {color:#CC3300;text-decoration:underline;}
-</style>
-
 </head>
 <body>
 
@@ -22,25 +17,24 @@ a.yangshi:hover {color:#CC3300;text-decoration:underline;}
 
 	<div id="container">
 		<if condition="$type eq '1'">
-			<center><b>创卫活动</b></label></center>
+			<div id="container_header"><h2>创卫活动</h2></div>
 			<title>创卫活动</title>
 		<elseif condition="$type eq '2'" />
-			<center><b>活动简讯</b></label></center>
+			<div id="container_header"><h2>活动简讯</h2></div>
 			<title>活动简讯</title>
-<!-- 		<elseif condition="$type eq '3'" />
-			<center><b>项目简介</b></label></center>
-			<title>项目简介</title> -->
 		</if>
 			
 		<volist name="res" id="vo">
-			<hr class="hr1">
-			<a href="__APP__/Contents/article_detail?c_id={$vo['c_id']}">
-				<div class="pic fl"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
-				<div class="title fl">{$vo['title']}</div>
+		  <div >
+		    <a class="activity_board fl"  href="__APP__/Contents/article_detail?c_id={$vo['c_id']}">
+				<div class="a_b_img fl">
+				  <img alt="" src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}">
+			    </div>
+  				<span class="a_b_title fl">{$vo['title']}</span>
 			</a>
 			<div class="nav"></div>
+		  </div>
 		</volist>
-
 	</div>
 
 	<div id="footer">

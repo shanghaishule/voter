@@ -18,15 +18,16 @@
 	<div id="container">
 
 		<if condition="!empty($my_content)">
-			<center><b>我发布的项目</b></center>
-
+			<div id="container_header"><h2>我发布的项目</h2></div>
 			<volist name="my_content" id="vo">
 				<!-- <hr class="hr1"> -->
-				<div class="contents fl">
-					<a href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
-						<div class="title fl">{$vo['title']}</div>
-						<div class="pic fl"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
-					</a>
+				<div>
+				  <a class="activity_board fl" href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
+					 <div  class="a_b_img fl">
+					   <img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}">
+					 </div>
+					 <span class="a_b_title fl">{$vo['title']}</span>
+				  </a>
 				</div>
 				<div class="nav"></div>
 			</volist>
@@ -34,13 +35,14 @@
 		</if>
 		
 		<if condition="!empty($my_join_content)">
-			<center><b>我报名的项目</b></center>
-
+            <div id="container_header"><h2>我报名的项目</h2></div>
 			<volist name="my_join_content" id="vo">
-				<div class="contents fl">
-					<a href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
-						<div class="title fl">{$vo['title']}</div>
-						<div class="pic fr"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
+				<div>
+					<a class="activity_board fl" href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
+						<div class="a_b_img fl">
+						  <img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}">
+						</div>
+						<span class="a_b_title fl">{$vo['title']}</span>
 					</a>
 				</div>
 				<div class="nav"></div>
@@ -48,13 +50,12 @@
 		</if>
 
 		<if condition="!empty($other_content)">
-			<center><b>别人发布的项目列表</b></center>
-
+            <div id="container_header"><h2>别人发布的项目列表</h2></div>
 			<volist name="other_content" id="vo">
-				<div class="contents fl">
-					<a href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
-						<div class="title fl">{$vo['title']}</div>
-						<div class="pic fr"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
+				<div>
+					<a class="activity_board fl" href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
+						<div class="a_b_img fl"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
+						<span class="a_b_title fl">{$vo['title']}</span>
 					</a>
 				</div>
 				<div class="nav"></div>

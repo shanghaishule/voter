@@ -82,9 +82,9 @@ br{
 	<include file="Public:header" />
 
 	<div id="container">
-		<center><b>{$res['title']}</b></center>
-
-		<div>&nbsp;&nbsp;发起人：{$res['v_id']}</div>
+	    <div id="container_header"><h2>{$res['title']}</h2></div>
+	    
+		<div>发起人：{$res['v_id']}</div>
 		<if condition="$res['flag'] eq '-1'">
 			<if condition="!empty($img)">
 				<volist name="img" id="vo">

@@ -16,16 +16,16 @@
 	<include file="Public:header" />
 
 	<div id="container">
-
-		<center><b>最新活动</b></center>
-
+		<div id="container_header"><h2>最新活动</h2></div>
 		<if condition="!empty($my_content)">
 			<volist name="my_content" id="vo">
 				<!-- <hr class="hr1"> -->
-				<div class="contents fl">
-					<a href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
-						<div class="title fl">{$vo['title']}</div>
-						<div class="pic fl"><img src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}"></div>
+				<div >
+					<a class="activity_board fl" href="__APP__/Active/active_detail?a_id={$vo['a_id']}">
+					  <div class="a_b_img fl">
+						<img alt="" src="{:pic_path('__PUBLIC__/Uploads/', $vo['pic'])}">
+					  </div>
+  					  <span class="a_b_title fl">{$vo['title']}</span>
 					</a>
 				</div>
 				<div class="nav"></div>

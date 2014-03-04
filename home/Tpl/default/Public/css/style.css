@@ -128,3 +128,49 @@ br{
 	color: red;
 	font-family: "SimSun";
 }
+
+/*
+* personal.html
+*/
+#container_header {
+  margin-bottom: 10px;
+}
+
+#container_header h2 {
+	border-bottom: solid 1px #c5e1ed;
+}
+
+/*
+* newest_active.html
+*/
+.activity_board {
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255,.8);
+  border: solid 1px #c5e1ed;
+  border-top: 2px solid #f29155;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.activity_board .a_b_title {
+  margin: 5px;
+  line-height: 40px;
+  overflow: hidden;
+  margin-left: 10px;
+  font-size: 14px;
+}
+.activity_board a {
+  text-decoration: none;
+}
+.activity_board .a_b_img {
+  border: 1px solid #ccc;
+  padding: 3px;
+  border-radius: 4px;
+  margin: 5px 0 0 5px;
+}
+.activity_board .a_b_img img {
+  width: 32px;
+  height: 32px;
+  border: none;
+}
