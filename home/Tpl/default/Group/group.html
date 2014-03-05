@@ -8,45 +8,8 @@
 <link type="text/css" rel="stylesheet" href="../Public/css/style.css">
 <link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
 
-<style type="text/css">
-.labels{
-/*	margin-left: 25px;*/
-	float: left;
-	text-align: right;
-	width: 116px;
-	font-size: 20px;
-}
-form{margin:0px}
-input{
-	width: 180px;
-	border:1px solid #808080;
-	margin: 2px;
-	padding: 2px;
-}
-
-textarea{
-	width: 250px;
-	height: 150px;
-}
-
-.button{
-	margin-left: 90px;
-	margin-top: 5px;
-	width: 140px;
-}
-
-.star{ color:red;}
-
-br{
-	clear: left;
-}
-.input_class{
-	margin-top: 5px;
-	padding-top: 5px;
-}
-</style>
-
 <load href="../Public/js/alert.js" />
+
 <script language="javascript">
 	var index = new Array();
 	var obj = new Array();　//创建一个数组
@@ -78,39 +41,52 @@ br{
 
 <div id="web">
 	<include file="Public:header" />
-
 	<div id="container">
-		<!-- <b><a href="__APP__/Index/personal">完善个人信息</a></b>&nbsp;&nbsp;<b><a href="__APP__/Group/group">完善志愿者组织信息</a></b> -->
-		<center><b>完善志愿者组织信息</b></center>
+		<div id="container_header"><h2>完善志愿者组织信息</h2></div>
 		<form action="__APP__/Group/group_insert" method="POST">
-			<input type="hidden" name="g_id" value="{$res['g_id']}" />
-
-			<div class="input_class">
-				<span class="labels">团体名称：</span>
-				<input type="text" name="name" value="{$res['name']}" />
-				<span class="star">*</span>
+            <div class="field_row">
+			  <span class="field_label">
+			    <input type="hidden" name="g_id" value="{$res['g_id']}" />
+			    <span class="required">*</span>
+				<span>团体名称：</span>
+			  </span>
+			  <span class="field_value">
+			    <input type="text" name="name" value="{$res['name']}" />
+			  </span>
 			</div>
-
-			<div class="input_class">
-				<span class="labels">成员人数：</span>
-				<input type="text" name="mem_num" value="{$res['mem_num']}" />
-				<span class="star">*</span>
+			
+			<div class="field_row">
+			  <span class="field_label">
+			    <span class="required">*</span>
+				<span>成员人数：</span>
+			  </span>
+			  <span class="field_value">
+			    <input type="text" name="mem_num" value="{$res['mem_num']}" />
+			  </span>
 			</div>
-				
-			<div class="input_class">
-				<span class="labels">负责人：</span>
-				<input type="text" name="resp" value="{$vid}" readonly />
+			
+			<div class="field_row">
+			  <span class="field_label">
+				<span>负责人：</span>
+			  </span>
+			  <span class="field_value">
+			    <input type="text" name="resp" value="{$vid}" readonly />
+			  </span>
 			</div>
-				
-			<div class="input_class">
-				<span class="labels">手机：</span>
-				<input type="text" name="phone" value="{$res['phone']}" />
-				<span class="star">*</span>
+			
+			<div class="field_row">
+			  <span class="field_label">
+			    <span class="required">*</span>
+				<span>手机：</span>
+			  </span>
+			  <span class="field_value">
+			    <input type="text" name="phone" value="{$res['phone']}" />
+			  </span>
 			</div>
-				
-			<div class="input_class">
-				<input type="submit" class="button" onclick="return input_check(this.form);" value="提交" />
-				<!-- <input type="submit" class="button" value="返回" onclick="window.history.go(-1)"> -->
+			
+			<div class="field_row margin_top_15">
+				<input type="submit" class="submit_btn" 
+				  onclick="return input_check(this.form);" value="提交" />
 			</div>
 		</form>
 

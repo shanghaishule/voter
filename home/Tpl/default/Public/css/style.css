@@ -139,13 +139,50 @@ br{
 #container_header h2 {
 	border-bottom: solid 1px #c5e1ed;
 }
+.field_row {
+  height: 30px;
+  margin-bottom: 4px;
+}
+.field_label {
+  display: inline-block;
+  width: 115px;
+  text-align: right;
+}
+.margin_top_15 {
+	margin-top: 15px;
+}
+
+input{
+	width: 180px;
+	border:1px solid #808080;
+	margin: 2px;
+	padding: 2px;
+	box-shadow: 0px 1px 1px 0px #eaeaea inset;
+	-webkit-box-shadow: 0px 1px 1px 0px #eaeaea inset;
+	-moz-box-shadow: 0px 1px 1px 0px #eaeaea inset;
+	border-radius: 4px;
+	border: 1px solid #a8d3e4;
+}
+
+input[type="text"]:focus {
+	/* border-color: #FFB941; */
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.submit_btn {
+  margin-left: 120px;
+  height: 30px;
+  border: 0;
+  font-size: 15px;
+  color: #FFF;
+  background-color: #9fb000;
+}
 
 /*
 * newest_active.html
 */
 .activity_board {
   border-radius: 4px;
-  background-color: rgba(255, 255, 255,.8);
+  background-image: linear-gradient( #ffffff , #e5eecc 100px);
   border: solid 1px #c5e1ed;
   border-top: 2px solid #f29155;
   margin-bottom: 10px;
@@ -173,4 +210,35 @@ br{
   width: 32px;
   height: 32px;
   border: none;
+}
+/*
+*  article_detail.html
+*/
+
+.contents {
+	margin: 15px 10px;
+}
+
+/*
+*  register_form.html
+*/
+.r_type {
+	margin: 30px 0 10px 60px;
+	height: 40px;
+}
+.r_type a {
+  text-decoration: none;
+  border: 0;
+  background-color: #9fb000;
+  border-radius: 4px;
+  display: inline-block;
+  height: 30px;
+  width: 100px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.margin_l_10 {
+  margin-left:10px;
 }

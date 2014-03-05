@@ -9,14 +9,6 @@
 <link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
 
 <style>
-.contents{
-	margin: 5px;
-	font-size: 13px;
-}
-.auth{
-	margin: 5px;
-	font-size: 13px;	
-}
 .pic{
 	margin: 5px;
 }
@@ -33,14 +25,17 @@
 	<include file="Public:header" />
 
 	<div id="container">
-		<center><b>{$res['title']}</b></center>
-		<div class="auth">
+		<div id="container_header"><h2>{$res['title']}</h2></div>
+		<div>
 			<center>作者：{$res['v_id']}</center>
 		</div>
-		<div class="contents">{$res['contents']}</div>
-		<if condition="$res['pic'] neq ''">
-			<div class="pic"><img src="__PUBLIC__/Uploads/{$res['pic']}"></div>
-		</if>
+		<div class="contents">
+		  <div class="contents_text">{$res['contents']}</div>
+		  <if condition="$res['pic'] neq ''">
+			<div class="contents_img"><img src="__PUBLIC__/Uploads/{$res['pic']}"></div>
+		  </if>
+		</div>
+		
 	</div>
 
 	<div id="footer">

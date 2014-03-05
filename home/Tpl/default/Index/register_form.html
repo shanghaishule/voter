@@ -8,16 +8,6 @@
 <link type="text/css" rel="stylesheet" href="../Public/css/style.css">
 <link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
 
-<style>
-.rectangle { width: 150px; height: 45px; background: rgb(218, 218, 218); margin: 2px; text-align: center;} 
-.rectangle a{
-	font-size: 30px;
-	margin: 2px;
-	padding: 2px;
-	color: black;
-}
-</style>
-
 </head>
 <body>
 
@@ -25,17 +15,12 @@
 	<include file="Public:header" />
 
 	<div id="container">
-		<!-- <center><b>您好，创卫志愿欢迎您！</b></center> -->
-
-		<div class="rectangle fl">
-			<a href="__APP__/Index/personal">个人信息</a>
-		</div>
-
-		<div class="rectangle fl">
-			<a href="__APP__/Group/group">组织信息</a>
-		</div>
+	  <div id="container_header"><h2>您好，创卫志愿欢迎您！</h2></div>
+      <div class="r_type">
+	    <a href="__APP__/Index/personal">个人信息 >></a>
+		<a class="margin_l_10" href="__APP__/Group/group">组织信息 >></a>
+      </div>
 	</div>
-
 	<div id="footer">
 		<include file="Public:footer" />
 	</div>
