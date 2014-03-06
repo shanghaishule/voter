@@ -139,7 +139,7 @@ br{
 #container_header h2 {
 	border-bottom: solid 1px #c5e1ed;
 }
-.field_row {
+.field_row , .detail_row{
   height: 30px;
   margin-bottom: 4px;
 }
@@ -152,7 +152,7 @@ br{
 	margin-top: 15px;
 }
 
-input{
+input,textarea{
 	width: 180px;
 	border:1px solid #808080;
 	margin: 2px;
@@ -164,7 +164,8 @@ input{
 	border: 1px solid #a8d3e4;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+textarea:focus {
 	/* border-color: #FFB941; */
 	outline: -webkit-focus-ring-color auto 5px;
 }
@@ -241,4 +242,63 @@ input[type="text"]:focus {
 
 .margin_l_10 {
   margin-left:10px;
+}
+
+/*
+*  add_form.html
+*/
+.text_area_row {
+  height: 85px;
+}
+
+.field_value textarea { 
+  height: 80px;
+  width: 180px;
+  margin-left: 2px;
+  border-radius: 4px;
+}
+
+/*
+*	active_form.html
+*/
+.margin_l_121 {
+  margin-left: 121px;
+}
+.margin_b_7 {
+	margin-bottom: 7px;
+}
+
+/*
+* active_detail.html
+*/
+.a_d_board {
+  border-radius: 4px;
+  background-image: linear-gradient( #ffffff , #e5eecc 100px);
+  border: solid 1px #c5e1ed;
+  border-top: 2px solid #f29155;
+  margin-bottom: 10px;
+  width: 100%;
+  padding-top: 10px;
+}
+.a_d_img {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px;
+  margin-left: 45px;
+  margin-bottom: 10px;
+  
+}
+
+.a_d_img img {
+  width: 230px;
+  height: 110px;
+}
+
+.detail_row {
+  height: 20px;
+  line-height: 20px;
+}
+.h_40 {
+  height:40px;
 }

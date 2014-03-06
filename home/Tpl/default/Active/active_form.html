@@ -8,44 +8,6 @@
 <link type="text/css" rel="stylesheet" href="../Public/css/style.css">
 <link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
 
-<style type="text/css">
-.labels{
-	margin-left: 5px;
-	float: left;
-	text-align: right;
-	width: 100px;
-	font-size: 20px;
-}
-form{margin:0px}
-input{
-	width: 180px;
-	border:1px solid #808080;
-	margin: 2px;
-	padding: 2px;
-}
-
-textarea{
-	width: 250px;
-	height: 150px;
-}
-
-.button{
-	margin-left: 90px;
-	margin-top: 5px;
-	width: 140px;
-}
-
-.star{ color:red;}
-
-br{
-	clear: left;
-}
-.input_class{
-	margin-top: 5px;
-	padding-top: 5px;
-}
-</style>
-
 <load href="../Public/js/Calendar.js" />
 <load href="../Public/js/alert.js" />
 
@@ -92,51 +54,77 @@ br{
 	<include file="Public:header" />
 
 	<div id="container">
-		<center><b>发布活动</b></center>
+		<div id="container_header"><h2>发布活动</h2></div>
 		<form action="__URL__/add_active" method="POST">
-			<div class="input_class">
-				<span class="labels">标题：</span>
+			
+      		<div class="field_row">
+			  <span class="field_label">
+				<span class="required">*</span>
+				<span>标题：</span>
+			  </span>
+			  <span class="field_value">
 				<input type="text" name="title" />
-				<span class="star">*</span>
-			</div>
-
-			<div class="input_class">
-				<span class="labels">时间：</span>
-				<input type="text" style="width:90px;" name="date_time_start" onclick="new Calendar().show(this);" readonly="readonly" />
-				<input type="text" style="width:30px;" name="hour1" value="00"/>:<input type="text" style="width:30px;" name="minit1" value="00" />至
-				<input type="text" style="width:90px;" name="date_time_end" onclick="new Calendar().show(this);" readonly="readonly" />
-				<input type="text" style="width:30px;" name="hour2" value="00"/>:<input type="text" style="width:30px;" name="minit2" value="00" />
-				<span class="star">*</span>
-			</div>
-				
-			<div class="input_class">
-				<span class="labels">地点：</span>
-				<input type="text" name="place" />
-				<span class="star">*</span>
+			  </span>
 			</div>
 			
-			<div class="input_class">
-				<span class="labels">内容：</span>
+			<div class="field_row">
+			  <span class="field_label">
+				<span class="required">*</span>
+				<span>起始时间：</span>
+			  </span>
+			  <input type="text" style="width:104px;" name="date_time_start" onclick="new Calendar().show(this);" readonly="readonly" />
+			  <input type="text" style="width:30px;" name="hour1" value="00"/>:<input type="text" style="width:30px;" name="minit1" value="00" />
+			</div>
+			
+			<div class="field_row">
+			  <span class="field_label">
+				<span class="required">*</span>
+				<span>结束时间：</span>
+			  </span>
+			  <input type="text" style="width:104px;" name="date_time_end" onclick="new Calendar().show(this);" readonly="readonly" />
+			  <input type="text" style="width:30px;" name="hour2" value="00"/>:<input type="text" style="width:30px;" name="minit2" value="00" />
+			</div>
+			
+			
+			<div class="field_row">
+			  <span class="field_label">
+				<span class="required">*</span>
+				<span>地点：</span>
+			  </span>
+			  <span class="field_value">
+				<input type="text" name="place" />
+			  </span>
+			</div>
+			
+			<div class="field_row">
+			  <span class="field_label">
+				<span class="required">*</span>
+				<span>内容：</span>
+			  </span>
+			  <span class="field_value">
 				<input type="text" name="contents" />
-				<span class="star">*</span>
+			  </span>
 			</div>
-
-			<div class="input_class">
-				<span class="labels">招募人数：</span>
+			
+			<div class="field_row">
+			  <span class="field_label">
+				<span class="required">*</span>
+				<span>招募人数：</span>
+			  </span>
+			  <span class="field_value">
 				<input type="text" name="num" />
-				<span class="star">*</span>
+			  </span>
 			</div>
 
-			<div class="input_class">
-				<span class="labels">图片：</span>
+			<div class="field_row">
+				<span class="field_label">图片：</span>
 				<input type="file" name="pic" id="pic" onchange="changImg('__APP__/Pic/upload_image', '__PUBLIC__/Uploads/')" />
 				<input type="hidden" name="pic_url" id="pic_url" value=""/>  
 				<div id="imgContainer1" style="max-width: 200px;margin: 0 auto;"></div>
 			</div>
-
-			<div class="input_class">
-				<input type="submit" class="button" onclick="return input_check(this.form);" value="提交" />
-				<!-- <input type="submit" class="button" value="返回" onclick="window.history.go(-1)"> -->
+			
+			<div class="field_row margin_top_15">
+			    <input type="submit" class="submit_btn" onclick="return input_check(this.form);" value="提交" />
 			</div>
 		</form>
 

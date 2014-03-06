@@ -8,127 +8,117 @@
 <link type="text/css" rel="stylesheet" href="../Public/css/style.css">
 <link type="text/css" rel="stylesheet" href="../Public/css/font-awesome.css">
 <link type="text/css" rel="stylesheet" href="../Public/css/detail_v2.css">
-<style>
-.labels{
-	float: left;
-	width: 60px;
-	font-size: 20px;
-}
-form{margin:0px}
-input{
-	width: 180px;
-	border:1px solid #808080;
-	margin: 0px;
-	padding: 0px;
-}
-.button{
-	margin-top: 5px;
-	margin-bottom: 5px;
-	width: 70px;
-}
-textarea{
-	width: 260px;
-	height: 40px;
-}
-.star{ color:red;}
-br{
-	clear: left;
-}
-.input_class{
-	margin-top: 5px;
-	padding-top: 5px;
-}
-.button2{
-	margin-left: 0px;
-	margin-top: 0px;
-	width: 66px;
-	height: 40px;
-}
-.time{
-	color: blue;
-	font-weight:bold;
-}
-.end{
-	margin: 1px;
-	padding: 1px;
-}
-.start_end{
-	margin: 1px;
-	padding: 1px;
-}
-
-.baoming{
-	background-color: silver;
-	border: silver 1px dashed;
-}
-.picture{
-
-}
-.picture img{
-	width: 100px;
-	height: 100px;
-	margin: 0 auto;
-}
-</style>
-
 <load href="../Public/js/jquery.min.js" />
 <load href="../Public/js/ajaxfileupload.js" />
 <load href="../Public/js/changImg.js" />
 
 </head>
-<body>
-
-<div id="web">
+  <body>
+  <div id="web">
 	<include file="Public:header" />
-
 	<div id="container">
-	    <div id="container_header"><h2>{$res['title']}</h2></div>
-	    
-		<div>发起人：{$res['v_id']}</div>
-		<if condition="$res['flag'] eq '-1'">
+	  <div id="container_header">
+	    <h2>{$res['title']}</h2>
+	  </div>
+	  	  
+	  <div>
+          <if condition="$res['flag'] eq '-1'">
 			<if condition="!empty($img)">
 				<volist name="img" id="vo">
-					<div class="picture fl">
+					<div class="a_d_img">
 						<img src="__PUBLIC__/Uploads/{$vo['pic']}">
 					</div>
 					<div class="nav"></div>
 				</volist>
 			<else />
-				<div class="picture">
+				<div class="a_d_img">
 					<img src="../Public/images/default.jpg">
 				</div>
 			</if>
-		<else />
+		    <else />
 			<if condition="!empty($res['pic'])">
-				<div class="picture">
+				<div class="a_d_img">
 					<img src="__PUBLIC__/Uploads/{$res['pic']}">
 				</div>
 			<else />
-				<div class="picture">
+				<div class="a_d_img">
 					<img src="../Public/images/default.jpg">
 				</div>
 			</if>
-		</if>
-
-		<div>
-			<div class="time">时间：</div>
-			<div class="end">&nbsp;&nbsp;截止{$res['date_time_end']}</div>
-			<div class="start_end">&nbsp;&nbsp;活动{$res['date_time_start']} 至 {$res['date_time_end']}</div>
+		   </if>
+      </div>
+        
+	  <div class="a_d_board">
+        <div class="detail_row">
+		  <span class="field_label">
+			<span>发起人：</span>
+		  </span>
+		  <span class="field_value">
+			{$res['v_id']}
+		  </span>
+		  <span>
+		  </span>
+	  </div>
+        <div class="detail_row">
+		  <span class="field_label">
+		    <span>报名截止：</span>
+		  </span>
+		  <span class="field_value">
+ 		    {$res['date_time_end']}
+		  </span>
 		</div>
-
-		<div>
-			<div class="time">地点：</div>
-			<div>&nbsp;&nbsp;{$res['place']}</div>
+		<div class="detail_row">
+		  <span class="field_label">
+		    <span>活动开始：</span>
+		  </span>
+		  <span class="field_value">
+ 		    {$res['date_time_start']}
+		  </span>
 		</div>
-
-		<div>
-			<div class="time">内容：</div>
-			<div>&nbsp;&nbsp;{$res['contents']}</div>
+		
+		<div class="detail_row">
+		  <span class="field_label">
+		    <span>活动结束：</span>
+		  </span>
+		  <span class="field_value">
+ 		    {$res['date_time_end']}
+		  </span>
 		</div>
-
-		<div>
-			<div class="time">志愿者：</div>
-			&nbsp;&nbsp;报名{$res['num_baoming']}人，招募{$res['num']}人
+		
+		<div class="detail_row">
+		  <span class="field_label">
+		    <span>地点：</span>
+		  </span>
+		  <span class="field_value">
+ 		    {$res['place']}
+		  </span>
+		</div>
+		
+		<div class="detail_row">
+		  <span class="field_label">
+		    <span>内容：</span>
+		  </span>
+		  <span class="field_value">
+ 		    {$res['contents']}
+		  </span>
+		</div>
+		
+		<div class="detail_row">
+		  <span class="field_label">
+		    <span>招募人数：</span>
+		  </span>
+		  <span class="field_value">
+ 		       {$res['num']}
+		  </span>
+		</div>
+		
+		<div class="detail_row">
+		  <span class="field_label">
+		    <span>报名人数：</span>
+		  </span>
+		  <span class="field_value">
+ 		       {$res['num_baoming']}
+		  </span>
 		</div>
 
 		<if condition="$res['is_admin'] eq '0'">
@@ -138,13 +128,16 @@ br{
 				<elseif condition="$res['flag'] eq '-1'" />
 					<form action="__URL__/upload_file" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="a_id" value="{$res['a_id']}" />
-						<div class="input_class">
-							<span class="labels">图片：</span>
-							<input type="file" name="pic" id="pic" onchange="changImg('__APP__/Pic/upload_image', '__PUBLIC__/Uploads/')" />
-							<input type="hidden" name="pic_url" id="pic_url" value=""/>  
-							<div id="imgContainer1" style="max-width: 200px;margin: 5px auto;"></div>
-							<center><input type="submit" class="button" value="提交" /></center>
-							<!-- <input type="submit" class="button" value="返回" onclick="window.history.go(-1)"> -->
+						<div class="detail_row">
+						  <span class="field_label">
+							<span>图片：</span>
+			  			  </span>
+						  <input type="file" name="pic" id="pic" onchange="changImg('__APP__/Pic/upload_image', '__PUBLIC__/Uploads/')" />
+						  <input type="hidden" name="pic_url" id="pic_url" value=""/>  
+						  <div id="imgContainer1" style="max-width: 200px;margin: 5px auto;"></div>
+						</div>
+						<div class="detail_row margin_top_15 h_40">
+			    		  <input type="submit" class="submit_btn" value="提交" />
 						</div>
 					</form>
 				<elseif condition="$res['flag'] eq '1'" />
@@ -191,6 +184,7 @@ br{
 				</div>
 			</div>
 		</if>
+	  </div>
 	</div>
 
 	<div id="footer">
